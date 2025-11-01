@@ -1,0 +1,194 @@
+/* 头部样式 */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo h1 {
+    color: #007bff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #007bff;
+    background-color: rgba(0,123,255,0.1);
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* 英雄区域 */
+.hero {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* 门店列表区域 */
+.shops-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.shop-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+
+.shop-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.shop-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.shop-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.shop-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.shop-info h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.shop-rating {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.shop-address {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.shop-phone {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.shop-bays {
+    background-color: #e7f3ff;
+    color: #0056b3;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.shop-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .shop-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop-list {
+        grid-template-columns: 1fr;
+    }
+
+    .user-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+}
